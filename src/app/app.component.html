@@ -1,4 +1,7 @@
-<h1>Hola a todos!</h1>
-<app-header></app-header>
+<h1>Hola {{userName}}</h1>
+<!-- <app-header></app-header> -->
+
+
+<input type="text" [value]="userName" />
 
 <router-outlet />
