@@ -1,6 +1,16 @@
 <h1>Username: {{userName}}</h1>
 <h1 (click)="addOne()">Number: {{number}}</h1>
 <input type="text" [(ngModel)]="userName" (input)="addOne()" />
+<h1>Bloque &#64;if -Renderizado dinamico</h1>
+@if (condition) {
+<h2>La condicion se cumple </h2>
+}
+
+@else if (condition2){
+<h2>La condicion 2 se cumple </h2>
+}@else{
+<h2>La condiciones no se cumplen </h2>
+}
 <!-- <app-header></app-header> -->
 
 
