@@ -13,12 +13,24 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'projectAngular';
-  number: number = 0;
-  userName: string = 'Adrian';
-  condition: boolean = false;
-  condition2: string = '';
+  // number: number = 0;
+  // userName: string = 'Adrian';
+  // condition: boolean = false;
+  // condition2: string = '';
+  movies: string[] = [
+    'Lord of the Rings',
+    'Star Wars',
+    'Harry Potter',
+    'The Hobbit',
+    'The Chronicles of Narnia',
+    'The Hunger Games',
+    'The Maze Runner',
+    'Divergent',
+    'Percy Jackson',
+    'Twilight',
+  ];
 
-  addOne() {
-    this.number++;
-  }
+  // addOne() {
+  //   this.number++;
+  // }
 }
