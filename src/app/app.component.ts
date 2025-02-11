@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { Animal } from '../data/animals';
 
 //import { HeaderComponent } from './components/header/header.component';
 
@@ -28,6 +29,23 @@ export class AppComponent {
     'Divergent',
     'Percy Jackson',
     'Twilight',
+  ];
+  animals: Animal[] = [
+    {
+      id: 1,
+      name: 'Dog',
+      img: 'https://picsum.photos/id/237/400/300',
+    },
+    {
+      id: 2,
+      name: 'Cat',
+      img: 'https://loremflickr.com/400/300/cat',
+    },
+    {
+      id: 3,
+      name: 'Sheep',
+      img: 'https://fastly.picsum.photos/id/200/400/300.jpg?hmac=lGKSofs7PgZo646BbRSOhTNhEuRS-FISyNTNUm14rsQ',
+    },
   ];
 
   // addOne() {
