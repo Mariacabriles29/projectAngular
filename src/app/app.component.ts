@@ -10,5 +10,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'projectAngular';
-  userName: string = 'Adrian';
+  number: number = 0;
+
+  addOne() {
+    this.number++;
+  }
 }
