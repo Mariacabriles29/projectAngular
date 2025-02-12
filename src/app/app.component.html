@@ -10,7 +10,7 @@
 }@else{
 <h2>La condiciones no se cumplen </h2>
 } -->
-<h1>Bloque &#64;for - Renderizado de listas</h1>
+<!-- <h1>Bloque &#64;for - Renderizado de listas</h1>
 @for (movie of movies; track movie){
 <p>{{$index + 1}} - {{ movie }}</p>
 }
@@ -21,8 +21,9 @@
     <img [src]="animal.img" />
   </li>
   }
-</ul>
+</ul> -->
 <!-- <app-header></app-header> -->
+<h1>&#64;input - Comunicacion padre- hijo !</h1>
 
-
+<app-child [msg]="text" [person]="person"></app-child>
 <router-outlet />
