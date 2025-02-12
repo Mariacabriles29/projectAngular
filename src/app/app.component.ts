@@ -53,11 +53,19 @@ export class AppComponent {
   //   this.number++;
   // }
 
-  //variable desde el padre
+  // comunicacion del padre al hijo variable desde el padre
 
   text: string = 'Variable desde el padre';
   person: any = {
     sex: 'hombre',
     age: '30',
   };
+
+  //para comunicacion del hijo al padre
+  name: string = '';
+
+  //creando una funcion que modifica el valor de la variable name
+  setName(e: any) {
+    this.name = e;
+  }
 }

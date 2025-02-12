@@ -1,4 +1,4 @@
-<h2>Este es el componente hijo</h2>
+<!-- <h2>Este es el componente hijo</h2> -->
 
 <!-- pasando la props del componenete hijo  -->
 <!-- <p>{{msg}}</p> -->
@@ -6,5 +6,13 @@
 
 <!-- le agregamos () a msg para llamar la valor de la señal signal, y realizar la comunicacion del padre al hijo -->
 
-<p>{{msg()}}</p>
-<div>{{person().sex }} - {{person().age}}</div>
+<!-- <p>{{msg()}}</p>
+<div>{{person().sex }} - {{person().age}}</div> -->
+
+<!-- con el uso de @Output() podemos comunicar el hijo con el padre -->
+
+<div class="child">
+  <h2>Este es el componente hijo</h2>
+  <p>Nombre de usuario: {{userName}}</p>
+  <button (click)="handleLogin()">Login</button>
+</div>
