@@ -54,7 +54,8 @@ export class AppComponent {
   // }
 
   //variable desde el padre
-  text: String = 'Variable desde el padre';
+
+  text: string = 'Variable desde el padre';
   person: any = {
     sex: 'hombre',
     age: '30',

@@ -1,5 +1,10 @@
 <h2>Este es el componente hijo</h2>
 
 <!-- pasando la props del componenete hijo  -->
-<p>{{msg}}</p>
-<div>{{person.sex }} - {{person.age}}</div>
+<!-- <p>{{msg}}</p> -->
+<!-- <div>{{person.sex }} - {{person.age}}</div> -->
+
+<!-- le agregamos () a msg para llamar la valor de la señal signal, y realizar la comunicacion del padre al hijo -->
+
+<p>{{msg()}}</p>
+<div>{{person().sex }} - {{person().age}}</div>
