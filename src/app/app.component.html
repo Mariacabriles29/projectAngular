@@ -28,7 +28,12 @@
 <app-child [msg]="text" [person]="person"></app-child> -->
 
 <!-- Comunicacion del hijo al padre  -->
-<h1>&#64;Output - Comunicacion hijo- padre !</h1>
+<!-- <h1>&#64;Output - Comunicacion hijo- padre !</h1>
+<h2 style="text-align: center;"> Hola {{name}}</h2>
+<app-child (login)="setName($event)"></app-child> -->
+
+<!-- Comunicacion del hijo al padre usando signals output  -->
+<h1>&#64;output API - Comunicacion hijo- padre !</h1>
 <h2 style="text-align: center;"> Hola {{name}}</h2>
 <app-child (login)="setName($event)"></app-child>
 <router-outlet />

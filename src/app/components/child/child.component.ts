@@ -1,4 +1,11 @@
-import { Component, EventEmitter, input, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  input,
+  Input,
+  output,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -21,8 +28,12 @@ export class ChildComponent {
 
   // variable para la comuniacion del hijo al padre
 
-  @Output()
-  login: EventEmitter<any> = new EventEmitter<any>();
+  // @Output()
+  // login: EventEmitter<any> = new EventEmitter<any>();
+  //usando el output como un signal
+
+  //ahora en las nuevas versiones se usa output COMO UNA SIGNALS en lugar de EventEmitteR y no se usan decoradores
+  login = output<any>();
 
   userName: string = 'Maria';
 
