@@ -2,21 +2,21 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Animal } from '../data/animals';
-import { ChildComponent } from './components/child/child.component';
+// import { ChildComponent } from './components/child/child.component';
 
 //import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, ChildComponent],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'projectAngular';
   // number: number = 0;
-  // userName: string = 'Adrian';
+  // userName: string = 'Maria';
   // condition: boolean = false;
   // condition2: string = '';
   // movies: string[] = [
@@ -55,17 +55,23 @@ export class AppComponent {
 
   // comunicacion del padre al hijo variable desde el padre
 
-  text: string = 'Variable desde el padre';
-  person: any = {
-    sex: 'hombre',
-    age: '30',
-  };
+  // text: string = 'Variable desde el padre';
+  // person: any = {
+  //   sex: 'hombre',
+  //   age: '30',
+  // };
 
-  //para comunicacion del hijo al padre
-  name: string = '';
+  // //para comunicacion del hijo al padre
+  // name: string = '';
 
-  //creando una funcion que modifica el valor de la variable name
-  setName(e: any) {
-    this.name = e;
+  // //creando una funcion que modifica el valor de la variable name
+  // setName(e: any) {
+  //   this.name = e;
+  // }
+
+  //se crea un constructor y se inicializa la variable userName
+  userName: string;
+  constructor() {
+    this.userName = 'Maria';
   }
 }
