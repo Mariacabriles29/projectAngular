@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Animal } from '../data/animals';
+import Product from './models/Produxt';
 // import { ChildComponent } from './components/child/child.component';
 
 //import { HeaderComponent } from './components/header/header.component';
@@ -70,8 +71,21 @@ export class AppComponent {
   // }
 
   //se crea un constructor y se inicializa la variable userName
+  //se agregan estos otros datos para el jemplo de un modelo y interface
+  //para usra product lo recomendable es que se cree un modelo o interface para que se pueda usar en varios componentes
+  // aqui en el app.component.ts se crea un objeto de tipo product y se le asignan valores de la interfaz Product
   userName: string;
+  myNumber: number;
+  myBoolean: boolean;
+  product: Product;
   constructor() {
     this.userName = 'Maria';
+    this.myNumber = 10;
+    this.myBoolean = true;
+    this.product = {
+      name: 'Computer',
+      price: 1000,
+      isForSale: true,
+    };
   }
 }
