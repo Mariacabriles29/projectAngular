@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Animal } from '../data/animals';
 import Product from './models/Produxt';
+import { NgClass } from '@angular/common';
 // import { ChildComponent } from './components/child/child.component';
 
 //import { HeaderComponent } from './components/header/header.component';
@@ -10,7 +11,7 @@ import Product from './models/Produxt';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -87,5 +88,14 @@ export class AppComponent {
       price: 1000,
       isForSale: true,
     };
+  }
+
+  //se cree una variable para contralar la clase de css que debe mostrar la directiva ngClass
+  //esto s ehace para aplicar clases dinamicamente
+  isDark: boolean = false;
+
+  //este metodo se encarga de cambiar el valor de la variable isDark
+  toogleDark() {
+    this.isDark = !this.isDark;
   }
 }

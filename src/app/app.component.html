@@ -44,6 +44,16 @@
 
 <!-- Modelos e interfaces -->
 
-<h1 style="text-align: center;">Modelos | interfaces</h1>
-<h2 style="text-align: center;"> Hola {{userName}}</h2>
+<!-- <h1 style="text-align: center;">Modelos | interfaces</h1>
+<h2 style="text-align: center;"> Hola {{userName}}</h2> -->
+
+
+
+<!-- Directiva ngClass | Clases dinamicas -->
+<h1> ngClass | Clases dinamicas </h1>
+
+<h2 [ngClass]="{dark:isDark , big:true}"> Hola a todos!</h2>
+
+<button (click)="toogleDark()">Toggle Dark</button>
+
 <router-outlet />
