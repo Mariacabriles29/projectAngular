@@ -9,3 +9,14 @@
 .big {
   font-size: 4em;
 }
+
+.contentForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buttonForm {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}

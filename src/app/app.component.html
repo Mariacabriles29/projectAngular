@@ -50,10 +50,29 @@
 
 
 <!-- Directiva ngClass | Clases dinamicas -->
-<h1> ngClass | Clases dinamicas </h1>
+<!-- <h1> ngClass | Clases dinamicas </h1>
 
 <h2 [ngClass]="{dark:isDark , big:true}"> Hola a todos!</h2>
 
-<button (click)="toogleDark()">Toggle Dark</button>
+<button (click)="toogleDark()">Toggle Dark</button> -->
 
+
+<!-- Formularios reactivos   -->
+
+
+<h1 style="text-align: center;"> Reactive Forms</h1>
+
+<form [formGroup]="movieForm" (submit)="handleSubmit()">
+  <fieldset class="contentForm">
+    <label for="movie-name">Movie Name:</label>
+    <input type="text" id="movie-name" formControlName="name" />
+    <label for="movie-duration">Movie Duration:</label>
+    <input type="text" id="movie-duration" formControlName="duration" />
+    <label for="movie-direction">Movie Direction:</label>
+    <input type="text" id="movie-direction" formControlName="director" />
+  </fieldset>
+  <div class="buttonForm">
+    <button (click)="handleSubmit()"> Create movie</button>
+  </div>
+</form>
 <router-outlet />
