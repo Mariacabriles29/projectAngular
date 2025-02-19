@@ -60,19 +60,32 @@
 <!-- Formularios reactivos   -->
 
 
-<h1 style="text-align: center;"> Reactive Forms</h1>
+<h1 style="text-align: center;"> Reactive Forms - Validators </h1>
 
 <form [formGroup]="movieForm" (submit)="handleSubmit()">
   <fieldset class="contentForm">
     <label for="movie-name">Movie Name:</label>
     <input type="text" id="movie-name" formControlName="name" />
+    @if (name.invalid && name.touched){
+    <p class="form-error">Name is required </p>
+    }
+  </fieldset>
+  <fieldset class="contentForm">
     <label for="movie-duration">Movie Duration:</label>
-    <input type="text" id="movie-duration" formControlName="duration" />
+    <input type="number" id="movie-duration" formControlName="duration" />
+    @if(duration.hasError('required') && duration.touched){
+    <p class="form-error">Duration is required</p>
+    }@else if (duration.hasError('max') && duration.touched){
+    <p class="form-error">Movie cannont be longer than 3000 minutes</p>
+
+    }
+  </fieldset>
+  <fieldset class="contentForm">
     <label for="movie-direction">Movie Direction:</label>
     <input type="text" id="movie-direction" formControlName="director" />
   </fieldset>
   <div class="buttonForm">
-    <button (click)="handleSubmit()"> Create movie</button>
+    <button [disabled]="movieForm.invalid"> Create movie</button>
   </div>
 </form>
 <router-outlet />

@@ -5,6 +5,7 @@ import {
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Animal } from '../data/animals';
@@ -113,8 +114,11 @@ export class AppComponent {
   director: FormControl;
 
   constructor() {
-    this.name = new FormControl('');
-    this.duration = new FormControl('');
+    this.name = new FormControl('', Validators.required);
+    this.duration = new FormControl('', [
+      Validators.required,
+      Validators.max(300),
+    ]);
     this.director = new FormControl('');
 
     this.movieForm = new FormGroup({
@@ -125,5 +129,7 @@ export class AppComponent {
   }
   handleSubmit(): void {
     console.log(this.movieForm.value);
+    //para limpiar los campos del formulario
+    this.movieForm.reset();
   }
 }
