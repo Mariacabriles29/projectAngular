@@ -1,14 +1,14 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 
 @Component({
-  selector: 'app-child',
+  selector: 'app-child2',
   standalone: true,
   imports: [],
-  templateUrl: './child.component.html',
-  styleUrl: './child.component.css',
+  templateUrl: './child2.component.html',
+  styleUrl: './child2.component.css',
 })
-export class ChildComponent {
+export class Child2Component {
   //se crea este constructor para poder usar el servicio de producto
   constructor(public productService: ProductService) {}
 }

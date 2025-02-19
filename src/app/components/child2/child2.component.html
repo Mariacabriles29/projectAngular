@@ -1,0 +1,10 @@
+<div class="child">
+  <h2>Este es otro componente hijo</h2>
+
+  <!-- Llamo al servicio para poder ver lo que contiene -->
+  <h3>{{ productService.product.name }}</h3>
+  <h3>{{productService.product.price}}</h3>
+  <button (click)="productService.setProductName('Television')">
+    Cambiar nombre
+  </button>
+</div>
