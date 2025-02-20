@@ -1,0 +1,17 @@
+.header {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.link {
+  color: white;
+  text-decoration: none;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+}
+.nav-list li {
+  list-style: none;
+}
