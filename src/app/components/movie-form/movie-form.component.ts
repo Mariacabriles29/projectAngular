@@ -34,7 +34,7 @@ export class MovieFormComponent {
       director: this.director,
     });
   }
-
+  //aqui llamamos al metodo addMovie del servicio movieService para agregar la pelicula
   handleSubmit(): void {
     console.log('Movie created:', this.movieForm.value);
     this.movieService.addMovie(this.movieForm.value);
