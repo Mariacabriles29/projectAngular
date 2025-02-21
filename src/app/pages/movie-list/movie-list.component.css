@@ -1,4 +1,4 @@
-.movie-list {
+/* .movie-list {
   margin: 30px;
 
   .movie-item {
@@ -11,6 +11,27 @@
     gap: 20px;
   }
   .movie-item:hover {
+    background-color: orange;
+  }
+} */
+.movie-list {
+  margin: 30px;
+
+  .link {
+    color: black;
+    text-decoration: none;
+  }
+
+  .movie-container {
+    padding-left: 20px;
+    background-color: lightcoral;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .movie-container:hover {
     background-color: orange;
   }
 }
